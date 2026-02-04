@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Entity
-public class Account extends BaseModel{
+public class AccountModel extends BaseModel{
 
     @Column(unique = true)
     private long accountNumber;

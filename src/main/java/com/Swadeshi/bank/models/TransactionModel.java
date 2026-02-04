@@ -19,7 +19,7 @@ public class TransactionModel extends BaseModel{
     private LocalDate transactionTime;
 
     @ManyToOne
-    private Account account;
+    private AccountModel account;
 
     public BigDecimal getAmount() {
         return amount;
@@ -45,11 +45,11 @@ public class TransactionModel extends BaseModel{
         this.transactionTime = transactionTime;
     }
 
-    public Account getAccount() {
+    public AccountModel getAccountModel() {
         return account;
     }
 
-    public void setAccount(Account account) {
+    public void setAccountModel(AccountModel account) {
         this.account = account;
     }
 }

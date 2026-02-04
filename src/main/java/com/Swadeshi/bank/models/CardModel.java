@@ -18,7 +18,7 @@ public class CardModel extends BaseModel{
     private LocalDate expiryDate;
 
     @ManyToOne
-    private Account account;
+    private AccountModel account;
 
     public Long getCardNumber() {
         return cardNumber;
@@ -44,11 +44,11 @@ public class CardModel extends BaseModel{
         this.expiryDate = expiryDate;
     }
 
-    public Account getAccount() {
+    public AccountModel getAccountModel() {
         return account;
     }
 
-    public void setAccount(Account account) {
+    public void setAccountModel(AccountModel account) {
         this.account = account;
     }
 }
