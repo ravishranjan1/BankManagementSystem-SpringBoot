@@ -31,14 +31,17 @@
 
         a{text-decoration:none}
 
+        /* NAVBAR */
         .navbar{
             position:sticky;
             top:0;
-            background:rgba(2,6,23,.9);
+            z-index:999;
+            background:rgba(2,6,23,.85);
             backdrop-filter:blur(12px);
             padding:14px 26px;
             display:flex;
             justify-content:space-between;
+            align-items:center;
             border-bottom:1px solid var(--border-soft);
         }
 
@@ -47,18 +50,19 @@
             align-items:center;
             gap:10px;
         }
-
-        .logo h2{
-            font-weight:900;
+        .app-logo{
+            width:42px;
+            height:42px;
+            border-radius:12px;
         }
+        .logo h2{font-weight:900}
         .logo span{color:var(--accent)}
 
         .nav-links a{
-            color:white;
             font-size:13px;
             padding:10px 16px;
             border-radius:14px;
-            background:rgba(255,255,255,0.06);
+            background:rgba(255,255,255,0.05);
             font-weight:700;
         }
 
@@ -186,10 +190,11 @@
 
 <div class="navbar">
     <div class="logo">
-        <h2>Swadeshi <span>Bank</span></h2>
+        <img th:src="@{/images/swadeshi.png}" class="app-logo">
+        <h2>Swadeshi<span>Bank</span></h2>
     </div>
     <div class="nav-links">
-        <a href="/bank/dashboard">Dashboard</a>
+        <a href="/swadeshi/">Dashboard</a>
     </div>
 </div>
 
@@ -227,42 +232,42 @@
             <span class="tag">Customer</span>
             <h3>👤 Manage Customers</h3>
             <p>Add, update and verify bank customers.</p>
-            <a class="open-btn" href="/bank/customer">Open</a>
+            <a class="open-btn" href="/swadeshi/customer/">Open</a>
         </div>
 
         <div class="card">
             <span class="tag">Branch</span>
             <h3>🏢 Branch Management</h3>
             <p>Manage IFSC, branch details and locations.</p>
-            <a class="open-btn" href="/bank/branch">Open</a>
+            <a class="open-btn" href="/swadeshi/branch/">Open</a>
         </div>
 
         <div class="card">
             <span class="tag">Account</span>
             <h3>🏦 Manage Accounts</h3>
             <p>Open savings/current accounts and manage status.</p>
-            <a class="open-btn" href="/bank/account">Open</a>
+            <a class="open-btn" href="/swadeshi/account/">Open</a>
         </div>
 
         <div class="card">
             <span class="tag">Transaction</span>
             <h3>💸 Transactions</h3>
             <p>Deposit, withdraw and view transaction history.</p>
-            <a class="open-btn" href="/bank/transaction">Open</a>
+            <a class="open-btn" href="/swadeshi/transaction/">Open</a>
         </div>
 
         <div class="card">
             <span class="tag">Loan</span>
             <h3>📄 Loan Management</h3>
             <p>Approve, track and manage customer loans.</p>
-            <a class="open-btn" href="/bank/loan">Open</a>
+            <a class="open-btn" href="/swadeshi/loan/">Open</a>
         </div>
 
         <div class="card">
             <span class="tag">Card</span>
             <h3>💳 Card Management</h3>
             <p>Issue debit/credit cards, manage expiry and card status.</p>
-            <a class="open-btn" href="/bank/card">Open</a>
+            <a class="open-btn" href="/swadeshi/card/">Open</a>
         </div>
 
 

@@ -1,11 +1,13 @@
 package com.Swadeshi.bank.validator;
 
 import com.Swadeshi.bank.models.CustomerModel;
+import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class CustomerValidator implements DataValidator{
 
     @Override

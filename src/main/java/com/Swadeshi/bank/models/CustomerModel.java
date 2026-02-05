@@ -2,6 +2,7 @@ package com.Swadeshi.bank.models;
 
 import jakarta.persistence.Entity;
 import jakarta.validation.constraints.Email;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
@@ -14,6 +15,8 @@ public class CustomerModel extends BaseModel{
     private String email;
     private Long phone;
     private String address;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate dob;
 
     public String getName() {
