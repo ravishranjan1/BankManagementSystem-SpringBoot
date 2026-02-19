@@ -85,4 +85,18 @@ public class BranchController {
         model.addAttribute("branches", branchService.findAllBranches());
         return "branch";
     }
+
+    @GetMapping("/find/{id}")
+    public String findById(@PathVariable Long id, Model model){
+        try {
+            BranchModel branch = branchService.findById(id);
+            model.addAttribute("success", "Branch found with id : "+id);
+            model.addAttribute("branches", List.of(branch));
+        } catch (IdNotFoundException e) {
+            model.addAttribute("error", e.getMessage());
+            model.addAttribute("branches", null);
+        }
+        return "branch";
+    }
+
 }
